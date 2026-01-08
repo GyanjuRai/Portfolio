@@ -114,7 +114,7 @@ animationStyle.textContent = `
 `;
 document.head.appendChild(animationStyle);
 
-// ========== Mobile Menu Toggle (optional, for future mobile menu implementation) ==========
+// ========== Mobile Menu Toggle  ==========
 function initMobileMenu() {
     const menuButton = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -133,13 +133,11 @@ function initMobileMenu() {
     }
 }
 
-// Initialize mobile menu if needed
+
 initMobileMenu();
 
 // ========== Download CV Handler ==========
 document.querySelector('.download-btn')?.addEventListener('click', function(e) {
-    // The browser will handle the download automatically with the download attribute
-    // This is just a placeholder for any additional tracking or validation
     console.log('CV download initiated');
 });
 
