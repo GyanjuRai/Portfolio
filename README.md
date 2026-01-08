@@ -33,11 +33,11 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
 
 ```
 portfolio/
-├── index.html      # Main HTML structure
-├── style.css       # All styling and responsive design
-├── script.js       # Interactive functionality
-├── Gyanju_Samphang_Rai.pdf          # Your resume 
+├── index.html    
+├── style.css       
+├── script.js      
+├── Gyanju_Samphang_Rai.pdf         
 ├── images/
-│   └── profile.jpg # Your profile picture
-└── README.md       # This file
+│   └── profile.jpg 
+└── README.md       
 ```
