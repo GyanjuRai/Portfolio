@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>🌸 Tiny Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h2 id="title">🌸 Tiny Test</h2>
+  <p id="text">You found something really cute...</p>
+  <div id="buttons">
+    <button id="yes">Buy Now 💸</button>
+    <button id="wait">Wait 1 Week 🌷</button>
+  </div>
+</div>
+
+<script>
+const title=document.getElementById('title');
+const text=document.getElementById('text');
+const buttons=document.getElementById('buttons');
+const yes=document.getElementById('yes');
+const wait=document.getElementById('wait');
+
+setInterval(()=>{
+  const p=document.createElement('div');
+  p.textContent='🌸';
+  p.className='petal';
+  p.style.left=Math.random()*100+'vw';
+  p.style.animationDuration=(4+Math.random()*4)+'s';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),8000);
+},500);
+
+function move(){
+  yes.style.position='relative';
+  yes.style.left=(Math.random()*120-60)+'px';
+  yes.style.top=(Math.random()*80-40)+'px';
+}
+yes.onclick=move;
+yes.onmouseenter=move;
+
+wait.onclick=()=>{
+  title.textContent='✨ Correct!';
+  text.textContent='...which reminds me 🥹';
+  buttons.innerHTML='<button id="next">Next 💗</button>';
+  document.getElementById('next').onclick=()=>{
+    title.textContent='Confession';
+    text.textContent='I forgot your 1-week buying rule. 😭';
+    buttons.innerHTML='<button id="forgive">Forgive him 🌸</button>';
+    document.getElementById('forgive').onclick=()=>{
+      title.textContent='Yayyy! 💗';
+      text.textContent='+1 Memory Updated ✨ I promise I\'ll remember it next time.';
+      buttons.innerHTML='';
+    };
+  };
+};
+</script>
+</body>
+</html>
